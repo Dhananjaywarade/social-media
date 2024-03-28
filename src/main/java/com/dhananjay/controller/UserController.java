@@ -59,16 +59,5 @@ public class UserController {
 	
 	
 	
-	@DeleteMapping("users/{userId}")
-	public String deleteUser(@PathVariable("userId") Integer userId) throws Exception {
-		
-		Optional<User> user=userRepository.findById(userId);
-		
-		if (user.isEmpty()) {
-			throw new Exception("user not exist with id : "+userId);
-		}
-		
-		userRepository.delete(user.get());
-		return "user deleted successfully with id : "+userId;	
-	}
+	
 } 	
