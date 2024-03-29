@@ -84,8 +84,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public List<User> searchUser(String query) {
-		// TODO Auto-generated method stub
-		return null;
+		return userRepository.searchUser(query);
 	}
 
 }
